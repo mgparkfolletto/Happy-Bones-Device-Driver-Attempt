@@ -39,7 +39,7 @@ public class NakazoIceMachine : IIceMachine
         var sendOk = SerialPortUtils.Write(getStatusCommand);
         Logger.Debug($"Send ok: {sendOk}");
         Thread.Sleep(200);
-        if (SerialPortUtils.SerialPort.BytesToRead <= 0) return new InvalidStatusResponseDataModel();
+        if (SerialPortUtils.SerialPort.BytesToRead <= 0) return new NakazoMachineStatusDataModel();
         
         var result = new byte[SerialPortUtils.SerialPort.BytesToRead];
         Logger.Debug($"Result length: {result.Length}");

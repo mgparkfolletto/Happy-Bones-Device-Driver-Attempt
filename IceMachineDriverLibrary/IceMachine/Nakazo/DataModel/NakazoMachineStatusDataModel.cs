@@ -12,6 +12,7 @@ public class NakazoMachineStatusDataModel : IIceMachineStatus
         .MinimumLevel.Debug()
         .CreateLogger();
 
+    public DeviceStatusE DeviceStatus { get; set; } = DeviceStatusE.Ng;
     private byte StatusData { get; }
     private byte ErrorData { get; }
 
@@ -46,6 +47,10 @@ public class NakazoMachineStatusDataModel : IIceMachineStatus
 
     #endregion
 
+    public NakazoMachineStatusDataModel()
+    {
+    }
+    
     public NakazoMachineStatusDataModel(byte statusData, byte errorData)
     {
         StatusData = statusData;
@@ -58,10 +63,22 @@ public class NakazoMachineStatusDataModel : IIceMachineStatus
     {
         var statusBinary = DataUtils.ByteToBinaryString(StatusData);
         var errorBinary = DataUtils.ByteToBinaryString(ErrorData);
-
         Logger.Debug($"StatusData: {statusBinary}");
         Logger.Debug($"ErrorData: {errorBinary}");
+        
+        if (ValidateStatusData(statusBinary, errorBinary) == false) return;
+        AssignMachineStatusBitValues(statusBinary);
 
+        var errorCode = errorBinary.Substring(4, errorBinary.Length - 4);
+        errorCode = errorCode.PadLeft(8, '0');
+        AssignErrorBitValues(errorCode, errorBinary);
+
+        DeviceStatus = ErrorData == 0x00 ? DeviceStatusE.Ok : DeviceStatusE.Ng;
+    }
+
+    private void AssignMachineStatusBitValues(string statusBinary)
+    {
+        #region Status Value Assignments
         IceIsFull = statusBinary[0] == '1' ? 1 : 0;
         IsInCommunicationMode = statusBinary[1] == '1' ? 1 : 0;
         CupLeverDetected = statusBinary[2] == '1' ? 1 : 0;
@@ -70,18 +87,13 @@ public class NakazoMachineStatusDataModel : IIceMachineStatus
         CompressorRunning = statusBinary[5] == '1' ? 1 : 0;
         IceDetectedInPreviousCycle = statusBinary[6] == '1' ? 1 : 0;
         NoIceDetectedInPreviousCycle = statusBinary[7] == '1' ? 1 : 0;
+        #endregion
+    }
 
-        Logger.Debug($"Error binary length: {errorBinary.Length}");
-        if (errorBinary.Length < 8) return;
-        // log index 4 of error binary
-        Logger.Debug($"Index 4 of error binary: {errorBinary[4]}");
-        Logger.Debug($"Last index of error binary: {errorBinary[^1]}");
-
-        var errorCode = errorBinary.Substring(4, errorBinary.Length - 4);
-        Logger.Debug($"Error code: {errorCode}");
-        errorCode = errorCode.PadLeft(8, '0');
-
+    private void AssignErrorBitValues(string errorCode, string errorBinary)
+    {
         var errorCodeByte = DataUtils.BinaryStringToByte(errorCode);
+        #region Error Code Assignments
         switch (errorCodeByte)
         {
             case 0x00:
@@ -120,8 +132,25 @@ public class NakazoMachineStatusDataModel : IIceMachineStatus
                 FanMotorFaulty = 1;
                 break;
         }
-
+        #endregion
         WaitingForIceOut = errorBinary[3];
+    }
+
+    private bool ValidateStatusData(string statusBinary, string errorBinary)
+    {
+        if (statusBinary.Length < 8)
+        {
+            DeviceStatus = DeviceStatusE.Ng;
+            return false;
+        }
+
+        if (errorBinary.Length < 8)
+        {
+            DeviceStatus = DeviceStatusE.Ng;
+            return false;
+        }
+
+        return true;
     }
 
     public override string ToString()
