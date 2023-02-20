@@ -1,0 +1,17 @@
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\bin\Debug\net6.0\IceMachineDriverLibrary.deps.json
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\bin\Debug\net6.0\IceMachineDriverLibrary.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\bin\Debug\net6.0\IceMachineDriverLibrary.pdb
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\bin\Debug\net6.0\GeneralUtils.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\bin\Debug\net6.0\SerialCommunicationUtils.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\bin\Debug\net6.0\GeneralUtils.pdb
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\bin\Debug\net6.0\SerialCommunicationUtils.pdb
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\obj\Debug\net6.0\IceMachineDriverLibrary.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\obj\Debug\net6.0\IceMachineDriverLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\obj\Debug\net6.0\IceMachineDriverLibrary.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\obj\Debug\net6.0\IceMachineDriverLibrary.AssemblyInfo.cs
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\obj\Debug\net6.0\IceMachineDriverLibrary.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\obj\Debug\net6.0\IceMachineDriverLibrary.csproj.CopyComplete
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\obj\Debug\net6.0\IceMachineDriverLibrary.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\obj\Debug\net6.0\refint\IceMachineDriverLibrary.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\obj\Debug\net6.0\IceMachineDriverLibrary.pdb
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\IceMachineDriverLibrary\obj\Debug\net6.0\ref\IceMachineDriverLibrary.dll

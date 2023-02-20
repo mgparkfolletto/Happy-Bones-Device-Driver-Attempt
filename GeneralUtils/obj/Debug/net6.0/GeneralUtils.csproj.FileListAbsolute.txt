@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\bin\Debug\net6.0\GeneralUtils.deps.json
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\bin\Debug\net6.0\GeneralUtils.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\bin\Debug\net6.0\GeneralUtils.pdb
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\obj\Debug\net6.0\GeneralUtils.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\obj\Debug\net6.0\GeneralUtils.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\obj\Debug\net6.0\GeneralUtils.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\obj\Debug\net6.0\GeneralUtils.AssemblyInfo.cs
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\obj\Debug\net6.0\GeneralUtils.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\obj\Debug\net6.0\GeneralUtils.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\obj\Debug\net6.0\refint\GeneralUtils.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\obj\Debug\net6.0\GeneralUtils.pdb
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\GeneralUtils\obj\Debug\net6.0\ref\GeneralUtils.dll

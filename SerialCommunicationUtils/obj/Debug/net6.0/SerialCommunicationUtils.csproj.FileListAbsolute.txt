@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\bin\Debug\net6.0\SerialCommunicationUtils.deps.json
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\bin\Debug\net6.0\SerialCommunicationUtils.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\bin\Debug\net6.0\SerialCommunicationUtils.pdb
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\obj\Debug\net6.0\SerialCommunicationUtils.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\obj\Debug\net6.0\SerialCommunicationUtils.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\obj\Debug\net6.0\SerialCommunicationUtils.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\obj\Debug\net6.0\SerialCommunicationUtils.AssemblyInfo.cs
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\obj\Debug\net6.0\SerialCommunicationUtils.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\obj\Debug\net6.0\SerialCommunicationUtils.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\obj\Debug\net6.0\refint\SerialCommunicationUtils.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\obj\Debug\net6.0\SerialCommunicationUtils.pdb
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\SerialCommunicationUtils\obj\Debug\net6.0\ref\SerialCommunicationUtils.dll
