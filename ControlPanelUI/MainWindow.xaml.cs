@@ -5,6 +5,7 @@ using System.Windows;
 using IceMachineDriverLibrary.IceMachine.Common;
 using IceMachineDriverLibrary.IceMachine.Nakazo.DataModel;
 using IceMachineDriverLibrary.IceMachine.Nakazo.Service;
+using IceMachineDriverLibrary.IceMachine.Singleton;
 using Serilog;
 
 namespace IceMachineDriver
@@ -30,8 +31,7 @@ namespace IceMachineDriver
         }
 
         private void ApplicationClosing(object? sender, CancelEventArgs e)
-        {
-        }
+        { }
 
         private async Task InitializeIceMachineConnection()
         {
@@ -92,16 +92,17 @@ namespace IceMachineDriver
         {
             try
             {
-                var iceMachine = new NakazoIceMachine();
-                iceMachine.Connect();
+                // var iceMachine = new NakazoIceMachine();
+                var iceMachine = IceMachineSingleton.Instance.IceMachine as NakazoIceMachine;
+                iceMachine?.Connect();
 
-                if (!iceMachine.IsConnected())
+                if (iceMachine != null && !iceMachine.IsConnected())
                 {
                     Logger.Debug("ice machine not connected");
                     return;
                 }
 
-                var temperatureDataModel = await iceMachine.GetTemperatureData();
+                var temperatureDataModel = await iceMachine?.GetTemperatureData()!;
 
                 TbLog.Text += $"{Environment.NewLine}" +
                               $"Exterior Temperature: {temperatureDataModel.ExteriorTemperature}{Environment.NewLine}" +
