@@ -87,5 +87,32 @@ namespace IceMachineDriver
                 Logger.Error(exception, $"Error while doing product test: {exception}");
             }
         }
+
+        private async void GetTemperatureDataButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var iceMachine = new NakazoIceMachine();
+                iceMachine.Connect();
+
+                if (!iceMachine.IsConnected())
+                {
+                    Logger.Debug("ice machine not connected");
+                    return;
+                }
+
+                var temperatureDataModel = await iceMachine.GetTemperatureData();
+
+                TbLog.Text += $"{Environment.NewLine}" +
+                              $"Exterior Temperature: {temperatureDataModel.ExteriorTemperature}{Environment.NewLine}" +
+                              $"Evaporator Temperature: {temperatureDataModel.EvaporatorTemperature}{Environment.NewLine}" +
+                              $"Condenser Temperature: {temperatureDataModel.CondenserTemperature}{Environment.NewLine}";
+                iceMachine.Close();
+            }
+            catch (Exception exception)
+            {
+                Logger.Error($"Error while Reading Temperature: {exception}");
+            }
+        }
     }
 }

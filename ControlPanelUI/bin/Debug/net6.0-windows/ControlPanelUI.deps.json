@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "IceMachineDriver/1.0.0": {
+      "ControlPanelUI/1.0.0": {
         "dependencies": {
           "FontAwesome.WPF": "4.7.0.9",
           "IceMachineDriverLibrary": "1.0.0",
@@ -15,7 +15,7 @@
           "System.IO.Ports": "7.0.0"
         },
         "runtime": {
-          "IceMachineDriver.dll": {}
+          "ControlPanelUI.dll": {}
         }
       },
       "FontAwesome.WPF/4.7.0.9": {
@@ -154,7 +154,7 @@
     }
   },
   "libraries": {
-    "IceMachineDriver/1.0.0": {
+    "ControlPanelUI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,5 +1,5 @@
-C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\DeviceDriverTests\bin\Debug\net6.0\testhost.exe
 C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\DeviceDriverTests\bin\Debug\net6.0\testhost.dll
+C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\DeviceDriverTests\bin\Debug\net6.0\testhost.exe
 C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\DeviceDriverTests\bin\Debug\net6.0\NUnit3.TestAdapter.dll
 C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\DeviceDriverTests\bin\Debug\net6.0\NUnit3.TestAdapter.pdb
 C:\Users\user\Desktop\Documents\Folletto\HappyBonesDriverTesting\IceMachineDriver\IceMachineDriver\DeviceDriverTests\bin\Debug\net6.0\nunit.engine.dll

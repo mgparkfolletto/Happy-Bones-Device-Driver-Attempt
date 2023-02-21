@@ -7,7 +7,7 @@ public class NakazoResponseDataModel
     public byte Data1 { get; set; } 
     public byte Data2 { get; set; }
 
-    public NakazoResponseDataModel(byte[] response)
+    public NakazoResponseDataModel(IReadOnlyList<byte> response)
     {
         Status = response[1];
         Command = response[2];
