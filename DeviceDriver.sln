@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceMachineDriver", "IceMachineDriver\IceMachineDriver.csproj", "{17152A57-6A1D-430A-86DB-2211486520C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlPanelUI", "ControlPanelUI\ControlPanelUI.csproj", "{17152A57-6A1D-430A-86DB-2211486520C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceDriverTests", "DeviceDriverTests\DeviceDriverTests.csproj", "{E05EA3EF-1544-4DA7-B168-B9B397F2C141}"
 EndProject

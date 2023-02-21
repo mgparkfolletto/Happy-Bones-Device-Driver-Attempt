@@ -3,13 +3,13 @@
 public static class NakazoDataUtils
 {
     /// <summary>
-    /// Converts Temperature data (hex string, e.g. 0x10) to integer
+    /// Converts Temperature data (byte, e.g. 0x10) to integer
     /// </summary>
     /// <param name="temperature"> Hex string of temperature data received from the Ice Machine</param>
     /// <returns>Converted Temperature data in degree celsius</returns>
-    public static int ConvertTempData(string temperature)
+    public static int ConvertTemperatureData(byte temperature)
     {
-        var temperatureData = Convert.ToInt32(temperature, 16);
+        int temperatureData = temperature;
         return ConvertTempDataRange(temperatureData);
     }
 

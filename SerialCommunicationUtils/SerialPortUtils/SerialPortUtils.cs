@@ -60,4 +60,17 @@ public class SerialPortUtils
         SerialPort.Write(data, 0, data.Length);
         return true;
     }
+
+    public async Task<byte[]> WriteAndGetResponseAsync(byte[] data)
+    {
+        Write(data);
+        await Task.Delay(200);
+        if (SerialPort.BytesToRead <= 0) return Array.Empty<byte>();
+        var result = new byte[SerialPort.BytesToRead];
+        while (SerialPort.BytesToRead > 0)
+        {
+            SerialPort.Read(result, 0, result.Length);
+        }
+        return result;
+    }
 }

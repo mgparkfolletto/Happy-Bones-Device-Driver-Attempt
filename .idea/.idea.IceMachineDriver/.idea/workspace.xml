@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f656da6-da4a-494b-8b37-9e456bb094e1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IceMachineDriver/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IceMachineDriver/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IceMachineDriverLibrary/IceMachine/Common/DeviceStatusE.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceMachineDriverLibrary/IceMachine/Nakazo/DataModel/NakazoMachineStatusDataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceMachineDriverLibrary/IceMachine/Nakazo/DataModel/NakazoMachineStatusDataModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceMachineDriverLibrary/IceMachine/Nakazo/Service/NakazoDataUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceMachineDriverLibrary/IceMachine/Nakazo/Service/NakazoDataUtils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceMachineDriverLibrary/IceMachine/Nakazo/Service/NakazoIceMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IceMachineDriverLibrary/IceMachine/Nakazo/Service/NakazoIceMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IceMachineDriver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IceMachineDriver/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676856796268</updated>
-      <workItem from="1676856809703" duration="24180000" />
+      <workItem from="1676856809703" duration="27189000" />
     </task>
     <servers />
   </component>

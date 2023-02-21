@@ -411,11 +411,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Documents\\Folletto\\HappyBonesDriverTesting\\IceMachineDriver\\IceMachineDriver\\IceMachineDriver\\IceMachineDriver.csproj",
-      "projectName": "IceMachineDriver",
-      "projectPath": "C:\\Users\\user\\Desktop\\Documents\\Folletto\\HappyBonesDriverTesting\\IceMachineDriver\\IceMachineDriver\\IceMachineDriver\\IceMachineDriver.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Documents\\Folletto\\HappyBonesDriverTesting\\IceMachineDriver\\IceMachineDriver\\ControlPanelUI\\ControlPanelUI.csproj",
+      "projectName": "ControlPanelUI",
+      "projectPath": "C:\\Users\\user\\Desktop\\Documents\\Folletto\\HappyBonesDriverTesting\\IceMachineDriver\\IceMachineDriver\\ControlPanelUI\\ControlPanelUI.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Documents\\Folletto\\HappyBonesDriverTesting\\IceMachineDriver\\IceMachineDriver\\IceMachineDriver\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\Documents\\Folletto\\HappyBonesDriverTesting\\IceMachineDriver\\IceMachineDriver\\ControlPanelUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

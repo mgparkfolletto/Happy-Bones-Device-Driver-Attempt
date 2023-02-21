@@ -67,7 +67,7 @@ namespace IceMachineDriver {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/IceMachineDriver;component/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ControlPanelUI;component/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

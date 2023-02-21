@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FRjV65jKhiTlcEVyTrgXte51pz74Xc24V54sHD1sW6A+sKesi63wZn6Duc5U3xJobpitfQJSv6Z8AD2t2e2AEw==",
+  "dgSpecHash": "1hpQDZfX6dVA6IOtjh/skc5ZFIgEVDJnQ/zp4bakEvm+ZKdmH7mMikfEmzMwiIRryoyUAUmdv4clmFpfBCfwYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\Documents\\Folletto\\HappyBonesDriverTesting\\IceMachineDriver\\IceMachineDriver\\IceMachineDriver\\IceMachineDriver.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\Documents\\Folletto\\HappyBonesDriverTesting\\IceMachineDriver\\IceMachineDriver\\ControlPanelUI\\ControlPanelUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\fontawesome.wpf\\4.7.0.9\\fontawesome.wpf.4.7.0.9.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\7.0.0\\runtime.linux-arm.runtime.native.system.io.ports.7.0.0.nupkg.sha512",

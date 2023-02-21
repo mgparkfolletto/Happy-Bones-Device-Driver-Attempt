@@ -16,7 +16,7 @@ public class NakazoIceMachine : IIceMachine
             outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level}] {Message}{NewLine}{Exception}")
         .MinimumLevel.Debug()
         .CreateLogger();
-    
+
     private SerialPortUtils SerialPortUtils { get; }
 
     public NakazoIceMachine()
@@ -36,17 +36,10 @@ public class NakazoIceMachine : IIceMachine
     {
         var getStatusCommand = NakazoCommandConstructor.GetMachineStatusMessage();
         Logger.Debug($"Get status command: {DataUtils.ByteArrayToReadableString(getStatusCommand)}");
-        var sendOk = SerialPortUtils.Write(getStatusCommand);
-        Logger.Debug($"Send ok: {sendOk}");
-        Thread.Sleep(200);
-        if (SerialPortUtils.SerialPort.BytesToRead <= 0) return new NakazoMachineStatusDataModel();
         
-        var result = new byte[SerialPortUtils.SerialPort.BytesToRead];
-        Logger.Debug($"Result length: {result.Length}");
-        while (SerialPortUtils.SerialPort.BytesToRead > 0)
-        {
-            SerialPortUtils.SerialPort.Read(result, 0, result.Length);
-        }
+        var resultTask = SerialPortUtils.WriteAndGetResponseAsync(getStatusCommand);
+        var result = resultTask.Result;
+
         NakazoResponseDataModel responseDataModel = new(result);
         Logger.Debug($"Data received: {DataUtils.ByteArrayToReadableString(result)}");
         Logger.Debug($"responseDataModel: {responseDataModel}");
@@ -74,26 +67,49 @@ public class NakazoIceMachine : IIceMachine
         var waterEmitDuration = doProductData.WaterPumpingDuration;
 
         var iceDurationData = NakazoDataUtils.ConvertTimeData(iceEmitDuration.ToString(CultureInfo.InvariantCulture));
-        var waterDurationData = NakazoDataUtils.ConvertTimeData(waterEmitDuration.ToString(CultureInfo.InvariantCulture));
-        
+        var waterDurationData =
+            NakazoDataUtils.ConvertTimeData(waterEmitDuration.ToString(CultureInfo.InvariantCulture));
+
         var doProductCommand = NakazoCommandConstructor.GetDoProductMessage(iceDurationData, waterDurationData);
         Logger.Debug($"Do product command: {DataUtils.ByteArrayToReadableString(doProductCommand)}");
-        var sendOk = SerialPortUtils.Write(doProductCommand);
-        Logger.Debug($"Send ok: {sendOk}");
-        Thread.Sleep(200);
-        if (SerialPortUtils.SerialPort.BytesToRead <= 0) return false;
         
-        var result = new byte[SerialPortUtils.SerialPort.BytesToRead];
-        Logger.Debug($"Result length: {result.Length}");
-        while (SerialPortUtils.SerialPort.BytesToRead > 0)
-        {
-            SerialPortUtils.SerialPort.Read(result, 0, result.Length);
-        }
+        var resultTask = SerialPortUtils.WriteAndGetResponseAsync(doProductCommand);
+        var result = resultTask.Result;
+
         NakazoResponseDataModel responseDataModel = new(result);
         Logger.Debug($"Data received: {DataUtils.ByteArrayToReadableString(result)}");
         Logger.Debug($"responseDataModel: {responseDataModel}");
         return responseDataModel.Command == NakazoProtocolDataModel.CommandDoProduct &&
                responseDataModel.Data1 == iceDurationData &&
-                responseDataModel.Data2 == waterDurationData;
+               responseDataModel.Data2 == waterDurationData;
+    }
+
+    public async Task<NakazoTemperatureDataModel> GetTemperatureData()
+    {
+        var getExteriorTemperatureCommand = NakazoCommandConstructor.GetExteriorTemperatureMessage();
+        var getEvaporatorAndCondenserTemperatureCommand =
+            NakazoCommandConstructor.GetEvaporatorAndCondenserMessage();
+        Logger.Debug(
+            $"Get exterior temperature command: {DataUtils.ByteArrayToReadableString(getExteriorTemperatureCommand)}");
+        Logger.Debug(
+            $"Get evaporator and condenser temperature command: {DataUtils.ByteArrayToReadableString(getEvaporatorAndCondenserTemperatureCommand)}");
+        
+        var result = await SerialPortUtils.WriteAndGetResponseAsync(getExteriorTemperatureCommand);
+        
+        NakazoResponseDataModel responseDataModel = new(result);
+        Logger.Debug($"Data received: {DataUtils.ByteArrayToReadableString(result)}");
+        Logger.Debug($"responseDataModel: {responseDataModel}");
+        var exteriorTemperature = NakazoDataUtils.ConvertTemperatureData(responseDataModel.Data1);
+        
+        await Task.Delay(200);
+        
+        result = await SerialPortUtils.WriteAndGetResponseAsync(getEvaporatorAndCondenserTemperatureCommand);
+        responseDataModel = new NakazoResponseDataModel(result);
+        Logger.Debug($"Data received: {DataUtils.ByteArrayToReadableString(result)}");
+        Logger.Debug($"responseDataModel: {responseDataModel}");
+        var evaporatorTemperature = NakazoDataUtils.ConvertTemperatureData(responseDataModel.Data1);
+        var condenserTemperature = NakazoDataUtils.ConvertTemperatureData(responseDataModel.Data2);
+        
+        return new NakazoTemperatureDataModel(exteriorTemperature, evaporatorTemperature, condenserTemperature);
     }
 }
